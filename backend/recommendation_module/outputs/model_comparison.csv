@@ -1,0 +1,5 @@
+model,r2,rmse,precision@5,ndcg@10,fit_seconds
+Random Forest,0.8865,0.0421,0.7964,0.9041,7.89
+Gradient Boosting,0.89,0.0415,0.7994,0.9049,35.19
+Decision Tree,0.8726,0.0446,0.7796,0.89,0.88
+Ridge Regression,0.8188,0.0532,0.7718,0.8849,0.03

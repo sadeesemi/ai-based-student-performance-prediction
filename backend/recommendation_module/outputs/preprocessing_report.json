@@ -1,0 +1,24 @@
+{
+  "rows": 5000,
+  "columns": 41,
+  "duplicate_student_ids": 0,
+  "missing_values": {
+    "Non_Engaged_Modules": 154
+  },
+  "missing_total": 154,
+  "numeric_columns": 22,
+  "categorical_columns": 19,
+  "engaged_learners": 154,
+  "learners_with_gaps": 4846,
+  "risk_distribution": {
+    "Medium Risk": 3641,
+    "Low Risk": 690,
+    "High Risk": 669
+  },
+  "learning_style_distribution": {
+    "At-Risk Learner": 1512,
+    "Moderate Learner": 1327,
+    "Passive Learner": 1176,
+    "Highly Engaged": 985
+  }
+}

@@ -1,0 +1,7 @@
+strategy,precision@5,recall@10,ndcg@10,map@10,mrr
+Hybrid - Random Forest (proposed),0.8032,0.9079,0.9065,0.9141,0.9958
+Rule-based filtering only,0.7402,0.8375,0.8489,0.8922,0.9932
+Hybrid - fixed linear weights,0.6862,0.841,0.8342,0.8525,0.9763
+Content-based only (TF-IDF),0.5472,0.7418,0.726,0.7776,0.9307
+Knowledge graph + GNN only,0.343,0.4872,0.4421,0.5148,0.6247
+Popularity / centrality baseline,0.1654,0.2302,0.1977,0.2953,0.3434

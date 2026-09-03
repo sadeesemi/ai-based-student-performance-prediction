@@ -1,0 +1,382 @@
+{
+  "generated": "2026-08-14 08:43:59",
+  "learners": 5000,
+  "resources": 41,
+  "pairs": 205000,
+  "train_learners": 4000,
+  "holdout_learners": 1000,
+  "ranking": {
+    "precision@1": 0.993,
+    "precision@3": 0.9033,
+    "precision@5": 0.8032,
+    "precision@10": 0.5112,
+    "recall@1": 0.1859,
+    "recall@3": 0.492,
+    "recall@5": 0.7188,
+    "recall@10": 0.9079,
+    "ndcg@1": 0.993,
+    "ndcg@3": 0.9297,
+    "ndcg@5": 0.8735,
+    "ndcg@10": 0.9065,
+    "map@1": 0.993,
+    "map@3": 0.9881,
+    "map@5": 0.964,
+    "map@10": 0.9141,
+    "hit_rate@10": 1.0,
+    "mrr": 0.9958
+  },
+  "regression": {
+    "r2": 0.8932,
+    "rmse": 0.0408,
+    "mae": 0.0325,
+    "spearman": 0.8698
+  },
+  "classification": {
+    "accuracy": 0.9435,
+    "precision": 0.8965,
+    "recall": 0.6663,
+    "f1": 0.7644,
+    "roc_auc": 0.9615,
+    "confusion_matrix": [
+      [
+        34926,
+        434
+      ],
+      [
+        1882,
+        3758
+      ]
+    ]
+  },
+  "catalogue": {
+    "catalogue_coverage": 0.9756,
+    "intra_list_lesson_diversity": 0.4848,
+    "distribution_entropy": 4.9611,
+    "gini": 0.9626,
+    "resource_hit_counts": [
+      103,
+      108,
+      132,
+      131,
+      189,
+      310,
+      435,
+      87,
+      66,
+      224,
+      357,
+      138,
+      119,
+      133,
+      131,
+      167,
+      307,
+      56,
+      7,
+      93,
+      312,
+      131,
+      133,
+      152,
+      17,
+      14,
+      257,
+      144,
+      195,
+      388,
+      103,
+      60,
+      204,
+      146,
+      224,
+      0,
+      18,
+      26,
+      44,
+      123,
+      16
+    ]
+  },
+  "per_risk_band": {
+    "High Risk": {
+      "learners": 142,
+      "precision@5": 0.9155,
+      "precision@10": 0.5746,
+      "recall@5": 0.7782,
+      "recall@10": 0.9744,
+      "ndcg@5": 0.9445,
+      "ndcg@10": 0.9695,
+      "map@5": 0.9873,
+      "map@10": 0.9605,
+      "hit_rate@10": 1.0,
+      "mrr": 1.0
+    },
+    "Low Risk": {
+      "learners": 143,
+      "precision@5": 0.6643,
+      "precision@10": 0.4385,
+      "recall@5": 0.6445,
+      "recall@10": 0.8328,
+      "ndcg@5": 0.7834,
+      "ndcg@10": 0.8294,
+      "map@5": 0.9295,
+      "map@10": 0.8548,
+      "hit_rate@10": 1.0,
+      "mrr": 0.9848
+    },
+    "Medium Risk": {
+      "learners": 715,
+      "precision@5": 0.8087,
+      "precision@10": 0.5131,
+      "recall@5": 0.7218,
+      "recall@10": 0.9097,
+      "ndcg@5": 0.8775,
+      "ndcg@10": 0.9094,
+      "map@5": 0.9663,
+      "map@10": 0.9168,
+      "hit_rate@10": 1.0,
+      "mrr": 0.9972
+    }
+  },
+  "ablation": [
+    {
+      "strategy": "Hybrid - Random Forest (proposed)",
+      "precision@5": 0.8032,
+      "recall@10": 0.9079,
+      "ndcg@10": 0.9065,
+      "map@10": 0.9141,
+      "mrr": 0.9958
+    },
+    {
+      "strategy": "Rule-based filtering only",
+      "precision@5": 0.7402,
+      "recall@10": 0.8375,
+      "ndcg@10": 0.8489,
+      "map@10": 0.8922,
+      "mrr": 0.9932
+    },
+    {
+      "strategy": "Hybrid - fixed linear weights",
+      "precision@5": 0.6862,
+      "recall@10": 0.841,
+      "ndcg@10": 0.8342,
+      "map@10": 0.8525,
+      "mrr": 0.9763
+    },
+    {
+      "strategy": "Content-based only (TF-IDF)",
+      "precision@5": 0.5472,
+      "recall@10": 0.7418,
+      "ndcg@10": 0.726,
+      "map@10": 0.7776,
+      "mrr": 0.9307
+    },
+    {
+      "strategy": "Knowledge graph + GNN only",
+      "precision@5": 0.343,
+      "recall@10": 0.4872,
+      "ndcg@10": 0.4421,
+      "map@10": 0.5148,
+      "mrr": 0.6247
+    },
+    {
+      "strategy": "Popularity / centrality baseline",
+      "precision@5": 0.1654,
+      "recall@10": 0.2302,
+      "ndcg@10": 0.1977,
+      "map@10": 0.2953,
+      "mrr": 0.3434
+    }
+  ],
+  "model_comparison": [
+    {
+      "model": "Random Forest",
+      "r2": 0.8865,
+      "rmse": 0.0421,
+      "precision@5": 0.7964,
+      "ndcg@10": 0.9041,
+      "fit_seconds": 7.89
+    },
+    {
+      "model": "Gradient Boosting",
+      "r2": 0.89,
+      "rmse": 0.0415,
+      "precision@5": 0.7994,
+      "ndcg@10": 0.9049,
+      "fit_seconds": 35.19
+    },
+    {
+      "model": "Decision Tree",
+      "r2": 0.8726,
+      "rmse": 0.0446,
+      "precision@5": 0.7796,
+      "ndcg@10": 0.89,
+      "fit_seconds": 0.88
+    },
+    {
+      "model": "Ridge Regression",
+      "r2": 0.8188,
+      "rmse": 0.0532,
+      "precision@5": 0.7718,
+      "ndcg@10": 0.8849,
+      "fit_seconds": 0.03
+    }
+  ],
+  "topk_curve": [
+    {
+      "k": 1,
+      "precision": 0.993,
+      "recall": 0.1859,
+      "ndcg": 0.993,
+      "map": 0.993
+    },
+    {
+      "k": 3,
+      "precision": 0.9033,
+      "recall": 0.492,
+      "ndcg": 0.9297,
+      "map": 0.9881
+    },
+    {
+      "k": 5,
+      "precision": 0.8032,
+      "recall": 0.7188,
+      "ndcg": 0.8735,
+      "map": 0.964
+    },
+    {
+      "k": 10,
+      "precision": 0.5112,
+      "recall": 0.9079,
+      "ndcg": 0.9065,
+      "map": 0.9141
+    }
+  ],
+  "knowledge_graph": {
+    "nodes": 5158,
+    "edges": 16769,
+    "node_types": {
+      "resource": 41,
+      "lesson": 10,
+      "topic": 21,
+      "tag": 79,
+      "student": 5000,
+      "risk": 3,
+      "style": 4
+    },
+    "edge_types": {
+      "HAS_RESOURCE": 41,
+      "PART_OF": 41,
+      "TAGGED_AS": 142,
+      "REQUIRES": 40,
+      "COVERS": 23,
+      "NOT_ENGAGED_IN": 6482,
+      "HAS_RISK": 5000,
+      "LEARNS_AS": 5000
+    },
+    "avg_degree": 6.5,
+    "density": 0.001261,
+    "components": 1,
+    "students": 5000
+  },
+  "gnn": {
+    "dim": 32,
+    "epochs": 250,
+    "final_link_auc": 0.8237,
+    "final_loss": 0.6648
+  },
+  "strategy_mix": [
+    {
+      "name": "Rule-based filtering",
+      "value": 77.4
+    },
+    {
+      "name": "Knowledge graph + GNN",
+      "value": 12.2
+    },
+    {
+      "name": "Content-based (TF-IDF)",
+      "value": 8.3
+    },
+    {
+      "name": "Context-aware behaviour",
+      "value": 2.1
+    }
+  ],
+  "feature_importance": {
+    "impurity": {
+      "lesson_gap": 0.096532,
+      "kg_proximity": 0.103781,
+      "difficulty_fit": 0.03872,
+      "duration_fit": 0.04715,
+      "style_type_fit": 0.008089,
+      "prereq_readiness": 0.080312,
+      "rule_score": 0.447873,
+      "content_score": 0.030511,
+      "tag_overlap": 0.006563,
+      "tfidf_lesson_sim": 0.046281,
+      "graph_score": 0.01286,
+      "gnn_style_affinity": 0.003266,
+      "kg_resource_centrality": 0.001703,
+      "risk_score": 0.006348,
+      "engagement_norm": 0.000672,
+      "performance_norm": 0.00067,
+      "attendance_ratio": 0.004713,
+      "gpa_norm": 0.000503,
+      "prior_score": 6.3e-05,
+      "time_budget": 0.001571,
+      "interaction_density_norm": 0.000501,
+      "submission_delay": 0.00014,
+      "forum_activity": 0.00024,
+      "n_gap_norm": 0.000195,
+      "quiz_gap": 0.000319,
+      "assessment_gap": 0.000332,
+      "resource_appetite": 0.000354,
+      "ability": 0.00466,
+      "res_duration_norm": 0.00268,
+      "res_difficulty": 0.034096,
+      "res_is_video": 0.008105,
+      "res_is_lab": 0.001109,
+      "res_is_pdf": 0.005117,
+      "res_prereq_count": 0.001962,
+      "res_lesson_size": 0.002005
+    },
+    "permutation": {
+      "lesson_gap": 0.030115,
+      "kg_proximity": 0.035143,
+      "difficulty_fit": 0.046648,
+      "duration_fit": 0.065835,
+      "style_type_fit": 0.002432,
+      "prereq_readiness": 0.167876,
+      "rule_score": 0.606007,
+      "content_score": 0.010571,
+      "tag_overlap": 0.001736,
+      "tfidf_lesson_sim": 0.009617,
+      "graph_score": 0.017499,
+      "gnn_style_affinity": 0.000556,
+      "kg_resource_centrality": 0.000192,
+      "risk_score": 0.007076,
+      "engagement_norm": 0.000105,
+      "performance_norm": 2.8e-05,
+      "attendance_ratio": 0.007759,
+      "gpa_norm": 2.6e-05,
+      "prior_score": -1e-06,
+      "time_budget": 0.000241,
+      "interaction_density_norm": -2.2e-05,
+      "submission_delay": 1.4e-05,
+      "forum_activity": -3e-06,
+      "n_gap_norm": 2e-06,
+      "quiz_gap": -7e-06,
+      "assessment_gap": 1.7e-05,
+      "resource_appetite": 3.1e-05,
+      "ability": 0.002771,
+      "res_duration_norm": 0.000443,
+      "res_difficulty": 0.03308,
+      "res_is_video": 0.008741,
+      "res_is_lab": 0.00061,
+      "res_is_pdf": 0.004118,
+      "res_prereq_count": 0.000113,
+      "res_lesson_size": 0.00033
+    }
+  }
+}
