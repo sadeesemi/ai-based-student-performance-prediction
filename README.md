@@ -1,26 +1,34 @@
-AI-Based Student Performance Prediction System
+# 🎓 AI-Based Student Performance Prediction System
 
-An AI-based system that analyzes student academic and learning behavior data to predict performance risk and provide personalized intervention recommendations.
+An AI-based system designed to **predict student academic risk and provide personalized learning recommendations** based on academic performance and learning behavior.
 
-Project Overview
+## ✨ Project Overview
 
-The system consists of three main modules:
+The system analyzes student data to:
 
-Module 01 – Student Profiling
-Module 02 – Risk Prediction
-Module 03 – Personalized Intervention Recommendation
+* 📊 Profile student performance
+* ⚠️ Predict academic risk levels
+* 🎯 Recommend personalized learning resources
+* 📈 Help identify students who may need additional support
 
-This repository contains the complete implementation of the system, including the backend, frontend, machine learning models, recommendation module, and generated outputs.
+The project contains three main modules:
 
-Technologies
-Python
-Flask
-Scikit-learn
-NumPy
-React
-Node.js
-MongoDB
-Project Structure
+1. **Student Profiling**
+2. **Risk Prediction**
+3. **Personalized Intervention Recommendation**
+
+## 🛠️ Technologies
+
+* Python
+* Flask
+* Scikit-learn
+* React
+* Node.js
+* MongoDB
+
+## 📁 Project Structure
+
+```text
 research_code/
 │
 ├── backend/
@@ -34,85 +42,112 @@ research_code/
 │
 ├── .gitignore
 └── README.md
-How to Run the Project
-1. Run the Backend / Recommendation Module
+```
 
-Open a terminal in the project folder:
+## 🚀 How to Run
 
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sadeesemi/ai-based-student-performance-prediction.git
+cd ai-based-student-performance-prediction
+```
+
+### 2. Run the Backend
+
+Open a terminal:
+
+```bash
 cd backend
+```
 
-Create a Python virtual environment:
+Create a virtual environment:
 
+```bash
 python -m venv .venv
-Windows
+```
+
+Activate it on Windows:
+
+```bash
 .venv\Scripts\activate
-macOS / Linux
-source .venv/bin/activate
+```
 
-Install the required Python packages:
+Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
-Go to the recommendation module:
+Start the Flask backend:
 
-cd recommendation_module
+```bash
+python app.py
+```
 
-Run the training and recommendation pipeline:
+Backend:
 
+```text
+http://localhost:5000
+```
+
+### 3. Run the Recommendation Module
+
+Open another terminal:
+
+```bash
+cd backend/recommendation_module
+```
+
+Run:
+
+```bash
 python main.py
+```
 
-This generates the required recommendation models, evaluation results, reports, and dashboard data.
+### 4. Run the Frontend
 
-2. Run the Frontend
+Open another terminal:
 
-Open a new terminal and go to the frontend folder:
-
+```bash
 cd frontend
+```
 
-Install the dependencies:
+Install dependencies:
 
+```bash
 npm install
+```
 
 Start the React application:
 
+```bash
 npm start
+```
 
-The application will open at:
+Frontend:
 
+```text
 http://localhost:3000
-3. Optional Flask API
+```
 
-To run the backend API:
+## 🎯 Personalized Recommendation Module
 
-cd backend
-python app.py
+The recommendation module provides personalized learning resources based on:
 
-The API will be available at:
+* Student risk level
+* Academic performance
+* Learning behavior
+* Weak areas
+* Learning preferences
 
-http://localhost:5000
-4. Test a Recommendation
+It combines **content-based recommendation, rule-based techniques, and knowledge-graph-based information** to generate suitable interventions.
 
-You can test the recommendation module for a student using:
+## 👩‍💻 Academic Project
 
-cd backend/recommendation_module
-python recommend_student.py ST1008 --verify
-
-Replace ST1008 with another student ID when required.
-
-Module 03
-
-The Personalized Intervention Recommendation module combines:
-
-Rule-based filtering
-Content-based recommendation using TF-IDF
-Knowledge Graph and GraphSAGE-based features
-Random Forest ranking
-Explainable AI techniques
-Risk and behavior-based intervention recommendations
-
-The dashboard allows users to search for a student and view their risk information, learning needs, recommendations, and intervention suggestions.
-
-Academic Project
-
-AI-Based Student Performance Prediction System
+**AI-Based Student Performance Prediction System**
 University of Moratuwa
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository.
